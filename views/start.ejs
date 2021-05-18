@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UpGaming</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/start.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <%- include('components/Header'); %>
+        <div class="b">
+            <div class="information">
+                <div id='l'>
+                    <img id='logo' src="/img/logo.png" />
+                </div>
+                <div id='t'>
+                    <h2>UpGaming!</h2>
+                    <h4>Roblox game studio.</h4>
+                    <h4>Our social media:</h4>
+                    <div>
+                        <a class="socialbtn" href="https://discord.gg/jKHYcXy">
+                            <img class="socialimg" src="/img/discordWhite.svg" />
+                        </a>
+                        <a class="socialbtn" href="https://www.roblox.com/groups/6887275/UpGaming#!/about">
+                            <img class="socialimg" src="/img/robloxWhite.svg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('components/Footer'); %>
+
+            <script src="/socket.io/socket.io.js"></script>
+</body>
+
+</html>

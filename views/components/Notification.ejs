@@ -1,0 +1,36 @@
+<script>
+    $(document).ready(() => {
+        $('.notif_ok').on('click', () => {
+            close()
+        })
+
+        $('body').on('click', (e) => {
+            if ($('.notif_bg').hasClass('in')) {
+                if (e.target.id == 'n') {
+                    close()
+                }
+            }
+        })
+
+        $('#n').on('webkitAnimationEnd oAnimationEnd msAnimationEnd animationend', () => {
+            if ($('.notif_bg').hasClass('out')) {
+                $('.notif_bg').removeClass('out')
+            }
+        })
+    })
+
+
+    function close() {
+        if ($('.notif_bg').hasClass('in')) $('.notif_bg').removeClass('in')
+        if (!$('.notif_bg').hasClass('out')) $('.notif_bg').addClass('out')
+    }
+</script>
+<div id='n' class="notif_bg">
+    <div class="msg">
+        <label class="notif_title">Title</label>
+        <label class="notif_desc">Text</label>
+        <div>
+            <button class="notif_ok">Ok</button>
+        </div>
+    </div>
+</div>

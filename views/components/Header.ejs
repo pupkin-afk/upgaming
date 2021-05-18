@@ -1,0 +1,41 @@
+<header>
+    <div id='forAnim'>
+        <a href="/" id='logo'>
+            <img src="/img/logo.png" />
+            <h2>UPGAMING</h2>
+        </a>
+    </div>
+
+    <script>
+        function logout() {
+            localStorage.setItem('auth', '')
+            window.location.pathname = '/'
+        }
+        $(document).ready(() => {
+            let path = window.location.pathname
+            if (localStorage.getItem('auth')) {
+                if (path == '/login' || path == '/signup' || path == '/') {
+                    window.location.pathname = '/home'
+                    return
+                }
+                $('#buttons').append(`
+                    <a onclick="logout()" id='logout'>LOGOUT</a>
+                `)
+                $
+            } else {
+                if (path == '/home') {
+                    window.location.pathname = '/'
+                    return
+                }
+                $('#buttons').append(`
+                    <a href="login">LOGIN</a>
+                    <a href="signup">SIGNUP</a>
+                `)
+            }
+        })
+    </script>
+
+    <div id="buttons">
+
+    </div>
+</header>
